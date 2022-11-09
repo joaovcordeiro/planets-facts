@@ -1,0 +1,12 @@
+export const background = "#070724";
+export const button_hover = "#38384f";
+export const planets_menu = "#838391";
+export const border = "#393950";
+export const mercury = "#419ebb";
+export const venus = "#eda249";
+export const earth = "#6f2ed6";
+export const mars = "#d14c32";
+export const jupiter = "#EDA249";
+export const saturn = "#FCCB6B";
+export const uranus = "#1ec2a4";
+export const neptune = "#2d68f0";
