@@ -46,6 +46,7 @@ p {
 
 body {
     background-color: ${background};
+    overflow-x: hidden;
 }
 `;
 

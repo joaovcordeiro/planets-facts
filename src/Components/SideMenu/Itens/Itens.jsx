@@ -2,14 +2,19 @@ import styled from "styled-components";
 import { BiChevronRight } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { border } from "../../../Styles/colors";
-import { useRecoilState } from "recoil";
-import { menuState } from "../../../State/atom";
+import { useRecoilState, useSetRecoilState } from "recoil";
+import { menuState, planetState } from "../../../State/atom";
 
 export default function Item({ planet, color }) {
   const [menu, setMenu] = useRecoilState(menuState);
+  const setPlanet = useSetRecoilState(planetState);
 
+  function handleClick() {
+    setMenu(false);
+    setPlanet(planet);
+  }
   return (
-    <ItemContainer onClick={() => setMenu(false)}>
+    <ItemContainer onClick={() => handleClick()}>
       <ItemLink to={planet}>
         <ItemDescription>
           <ItemColor planetTheme={color}></ItemColor>
@@ -32,7 +37,7 @@ const ItemLink = styled(Link)`
   align-items: center;
   text-decoration: none;
   justify-content: space-between;
-  padding: 0 32px 0 24px;
+  padding: 10px 32px 10px 24px;
 `;
 
 const ItemColor = styled.div`
