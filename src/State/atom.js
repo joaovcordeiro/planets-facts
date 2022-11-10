@@ -1,4 +1,7 @@
 import { atom } from "recoil";
+import filterPlanets from "../utils/filterPlanet";
+
+const earthInfo = filterPlanets("earth");
 
 export const menuState = atom({
   key: "menuState",
@@ -8,4 +11,9 @@ export const menuState = atom({
 export const planetState = atom({
   key: "planetState",
   default: "earth",
+});
+
+export const planetInfoState = atom({
+  key: "planetInfoState",
+  default: { ...earthInfo },
 });

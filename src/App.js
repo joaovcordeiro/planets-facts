@@ -16,10 +16,10 @@ function App() {
         <SideMenu />
         <InfoMenu />
         <Routes>
-          <Route path="/planet">
+          <Route path="/">
             <Route path="overview" element={<Overview />} />
-            <Route path="structure" element={<Overview />} />
-            <Route path="surface" element={<Overview />} />
+            {/* <Route path="structure" element={<Overview />} />
+            <Route path="surface" element={<Overview />} /> */}
           </Route>
         </Routes>
       </Router>

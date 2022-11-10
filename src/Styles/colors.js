@@ -1,5 +1,6 @@
 export const background = "#070724";
 export const button_hover = "#38384f";
+export const info_menu = "#838391";
 export const planets_menu = "#838391";
 export const border = "#393950";
 export const mercury = "#419ebb";
