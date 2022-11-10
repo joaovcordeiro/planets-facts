@@ -20,7 +20,7 @@ export default function Item({ planet, color }) {
   return (
     <>
       <ItemContainer onClick={() => handleClick()}>
-        <ItemLink>
+        <ItemLink to="/overview">
           <ItemDescription>
             <ItemColor planetTheme={color}></ItemColor>
             <ItemName>{planet.toUpperCase()}</ItemName>
