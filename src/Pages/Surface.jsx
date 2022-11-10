@@ -10,11 +10,16 @@ export default function Surface() {
   return (
     <>
       <Container>
-        <PlanetImage src={planetInfo.images.internal}></PlanetImage>
+        <PlanetFigure>
+          <PlanetImage src={planetInfo.images.planet}></PlanetImage>
+          <SurfaceFigure>
+            <PlanetGeology src={planetInfo.images.geology}></PlanetGeology>
+          </SurfaceFigure>
+        </PlanetFigure>
         <PlanetDescription
           name={planetInfo.name}
-          content={planetInfo.structure.content}
-          source={planetInfo.structure.source}
+          content={planetInfo.geology.content}
+          source={planetInfo.geology.source}
         />
         <Info
           rotation={planetInfo.rotation}
@@ -36,4 +41,20 @@ const Container = styled.div`
 const PlanetImage = styled.img`
   transform: scale(0.45);
   z-index: -1;
+`;
+
+const PlanetGeology = styled.img`
+  transform: scale(0.25);
+`;
+
+const PlanetFigure = styled.div`
+  position: relative;
+  z-index: -1;
+`;
+
+const SurfaceFigure = styled.div`
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 67%;
 `;
