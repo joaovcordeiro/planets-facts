@@ -3,11 +3,17 @@ import { BiChevronRight } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { border } from "../../../Styles/colors";
 import { useRecoilState, useSetRecoilState } from "recoil";
-import { menuState, planetState, planetInfoState } from "../../../State/atom";
+import {
+  menuState,
+  planetState,
+  planetInfoState,
+  infoMenu,
+} from "../../../State/atom";
 import filterPlanets from "../../../utils/filterPlanet";
 
 export default function Item({ planet, color }) {
   const [menu, setMenu] = useRecoilState(menuState);
+  const setInfo = useSetRecoilState(infoMenu);
   const setPlanet = useSetRecoilState(planetState);
   const setPlanetInfo = useSetRecoilState(planetInfoState);
   const planetInfo = filterPlanets(planet);
@@ -16,6 +22,7 @@ export default function Item({ planet, color }) {
     setMenu(false);
     setPlanet(planet);
     setPlanetInfo(planetInfo);
+    setInfo("overview");
   }
   return (
     <>

@@ -8,6 +8,11 @@ export const menuState = atom({
   default: true,
 });
 
+export const infoMenu = atom({
+  key: "infoMenu",
+  default: "overview",
+});
+
 export const planetState = atom({
   key: "planetState",
   default: "earth",

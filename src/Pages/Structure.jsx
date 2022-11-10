@@ -4,17 +4,17 @@ import { planetInfoState } from "../State/atom";
 import PlanetDescription from "../Components/PlanetDescription/PlanetDescription";
 import Info from "../Components/Info/Info";
 
-export default function Overview() {
+export default function Structure() {
   const [planetInfo] = useRecoilState(planetInfoState);
   console.log(planetInfo);
   return (
     <>
       <Container>
-        <PlanetImage src={planetInfo.images.planet}></PlanetImage>
+        <PlanetImage src={planetInfo.images.internal}></PlanetImage>
         <PlanetDescription
           name={planetInfo.name}
-          content={planetInfo.overview.content}
-          source={planetInfo.overview.source}
+          content={planetInfo.structure.content}
+          source={planetInfo.structure.source}
         />
         <Info
           rotation={planetInfo.rotation}

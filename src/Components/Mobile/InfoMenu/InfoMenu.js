@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import { background, border, info_menu } from "../../../Styles/colors";
-import { useState } from "react";
-import { useRecoilValue } from "recoil";
-import { planetState } from "../../../State/atom";
+import { useRecoilValue, useRecoilState } from "recoil";
+import { planetState, infoMenu } from "../../../State/atom";
 import { useNavigate } from "react-router-dom";
 import setColor from "../../../utils/setColor";
 
 export default function InfoMenu() {
-  const [selected, setSelected] = useState("overview");
+  const [selected, setSelected] = useRecoilState(infoMenu);
+
   const planet = useRecoilValue(planetState);
   const navigate = useNavigate();
   const planetColor = setColor(planet);
