@@ -18,22 +18,25 @@ export default function Item({ planet, color }) {
     setPlanetInfo(planetInfo);
   }
   return (
-    <ItemContainer onClick={() => handleClick()}>
-      <ItemLink>
-        <ItemDescription>
-          <ItemColor planetTheme={color}></ItemColor>
-          <ItemName>{planet.toUpperCase()}</ItemName>
-        </ItemDescription>
-        <ItemIcon />
-      </ItemLink>
+    <>
+      <ItemContainer onClick={() => handleClick()}>
+        <ItemLink>
+          <ItemDescription>
+            <ItemColor planetTheme={color}></ItemColor>
+            <ItemName>{planet.toUpperCase()}</ItemName>
+          </ItemDescription>
+          <ItemIcon />
+        </ItemLink>
+      </ItemContainer>
       <Border />
-    </ItemContainer>
+    </>
   );
 }
 
 const ItemContainer = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 15px 0;
 `;
 
 const ItemLink = styled(Link)`
