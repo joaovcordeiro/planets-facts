@@ -55,8 +55,9 @@ p {
 
 body {
     background-color: ${background};
-    overflow-x: hidden;
 }
+
+    
 `;
 
 export default GlobalStyle;

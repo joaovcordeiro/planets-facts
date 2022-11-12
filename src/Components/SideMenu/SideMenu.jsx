@@ -37,7 +37,7 @@ export default function SideMenu() {
 const Barra = styled.div`
   background-color: ${background};
   position: absolute;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   left: ${(props) => props.position};
   transition: 0.2s linear;

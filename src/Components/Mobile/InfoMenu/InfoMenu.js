@@ -58,4 +58,5 @@ const InfoItem = styled.h3`
   padding: 10px 0;
 
   border-bottom: 2px solid ${(props) => props.border};
+  cursor: pointer;
 `;
